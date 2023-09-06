@@ -1,15 +1,15 @@
 import * as React from "react";
-import { createRoot } from "react-dom/client";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
-  Route,
+
   Link,
 } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
 
 
-const router = createBrowserRouter([
+
+const router = createHashRouter([
     {
         path: "/",
         element: <div>
@@ -25,11 +25,14 @@ const router = createBrowserRouter([
         <NavigationBar/>
       ),
     },
+
+
   ]);
 
 function App() {
     return (
-    <RouterProvider router={router} />
+            <RouterProvider router={router}/>
+        
     );
 };
 
