@@ -1,31 +1,46 @@
 import * as React from "react";
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
-
-  Link,
 } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
+import HomePage from "./HomePage";
+import ContactPage from "./ContactPage";
+import ServicesPage from "./ServicesPage";
+import AboutPage from "./AboutPage";
 
 
 
-const router = createHashRouter([
+const router = createBrowserRouter([
     {
         path: "/",
-        element: <div>
-        <h1>Welcome Home</h1>
-        <h2>Click the link below to get to see other things <Link to= "/navigation">here</Link>
-        </h2>
-        </div>,
+        element: <HomePage/>,
     },
 
+    {
+      path: "/about",
+      element: (
+        <AboutPage/>
+      ),
+    },
+    {
+      path: "/services",
+      element: (
+        <ServicesPage/>
+      ),
+    },
+    {
+      path: "/contact",
+      element: (
+        <ContactPage/>
+      ),
+    },
     {
       path: "/navigation",
       element: (
         <NavigationBar/>
       ),
     },
-
 
   ]);
 

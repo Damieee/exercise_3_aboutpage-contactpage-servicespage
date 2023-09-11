@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorBoundary from '../errorBoundary';
+import ErrorBoundary from './errorBoundary';
 
 const ServicesPage = () => {
   return (

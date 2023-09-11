@@ -1,10 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Route, Routes } from 'react-router-dom';
-import ContactPage from './contact_page/ContactPage';
-import ServicesPage from './services_page/ServicesPage';
-import AboutPage from './about_page/AboutPage';
 
 const NavigationBar = () => {
   return (
@@ -41,11 +37,6 @@ const NavigationBar = () => {
             </Nav>
         </Navbar.Collapse>
         </Navbar>
-        <Routes>
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-        </Routes>
       </>
   );
 };
